@@ -3,9 +3,10 @@
     "",
     "\\docs",
     "\\docs\\network",
-    "\\docs\\network\\materials",
-    "\\docs\\network\\wireless"
+    "\\docs\\network\\wireless",
+    "\\docs\\sensors",
+    "\\docs\\sensors\\InSAR"
   ],
-  "SelectedNode": "\\docs\\network\\materials\\select_router_address.png",
+  "SelectedNode": "\\docs\\network\\wireless\\wireless_communication_basics.md",
   "PreviewInSolutionExplorer": false
 }

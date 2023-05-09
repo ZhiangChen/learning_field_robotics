@@ -1,8 +1,8 @@
 # Robotics Workshop
 ## Basics
 - workbench
-- chair
-- computer/laptop
+- chair 
+- computer/laptop 
 - monitor
 - tool box
 - pegboard and hooks

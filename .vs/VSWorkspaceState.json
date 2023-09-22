@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\docs",
+    "\\docs\\logistics",
     "\\docs\\network",
-    "\\docs\\network\\wireless",
-    "\\docs\\sensors",
-    "\\docs\\sensors\\InSAR"
+    "\\docs\\sensors"
   ],
+  "SelectedNode": "\\docs\\logistics\\FAA_Drone_Pilot_license.md",
   "PreviewInSolutionExplorer": false
 }

@@ -23,7 +23,7 @@ With Standard Remote ID (not just a Remote ID broadcast module), a UAV can be op
 
 The Remote ID rule was released in April 2021 and will be effective to all pilots in Sept 16th, 2023 (30 months after the release date).
 
-### CFR part 107
+## CFR part 107
 1. FAA: Federal Aviation Administration.
 
 2. FTN: FAA Tracking Number.
@@ -93,7 +93,7 @@ Categort 4: Requires airworthiness certificate and flight manual.
 
 Declaration of compliance is required for category 2,3. 
 
-### Airspace
+## Airspace
 FAA Airspace for UAV can be found on the website: https://faa.maps.arcgis.com/apps/webappviewer/index.html?id=9c2e4406710048e19806ebf6a06754ad, or skyvector website: https://skyvector.com/
 
 1. AGL: above ground level.
@@ -141,7 +141,7 @@ Use FAA approved apps, such as Aloft
 
 21. Small magenta circles are airport without painting runways. 
 
-### Weather
+## Weather
 METAR: Meteorological aviation routine weather reports, updated at least hourly: https://www.aviationweather.gov/metar  
 METAR (1. report type) KBNA (2. station identifier) 281251Z (3. day and time zone) AUTO (4. modifier) 12008KT (5. wind) 4SM-RA HZ(6. visibility 7. weather) BKN010 OVC023 (8. sky condition) 21/17 (9. temperature) A3005 (10. Altimeter) RMK RAB25 (11. remark) 
 
@@ -218,7 +218,7 @@ Upslope: warm air is cooled by high altitude slope
 Evaporation: evaporated warm air is cooled by cool air  
 
 
-### ADM & CRM
+## ADM & CRM
 ADM: Aeronautical Decision Making; determine the best course of action  
 CRM: Crew Resource Management; involving human, hardware, and information resources; used during all phases of the operation (preflight, inflight, and post flight).  
 
@@ -257,7 +257,7 @@ Hazardous Attitudes:
 4. Macho: "I can do it" - "Taking chances is foolish"  
 5. Resignation: "What's the use?" - "I am not helpless"  
 
-### Aicraft Loading and Performance 
+## Aicraft Loading and Performance 
 1. Weight and balance information will be in the Pilot's Operating Handbook or UAS manual.
 
 2. After CG has better aircraft performance. 
@@ -276,7 +276,7 @@ negative: diverging
 7. Load factor increase at anytime a force is applied to an aircraft to deflect its flight from a straight line. 
 
 
-### Aeromedical Factors & Emergency procedures
+## Aeromedical Factors & Emergency procedures
 1. Hyperventilation: excessive rate of breathing that cause CO2 decrease and O2 increase, resulting in unconsciousness. 
 
 2. Blood alcohol concentration (BAC): less than 0.04 percent. 
@@ -287,7 +287,7 @@ negative: diverging
 
 5. RPIC should program the lost link route to avoid flying over people. It is best to avoid flying over people all the times. 
 
-### Airport Operation & Radio Communications 
+## Airport Operation & Radio Communications 
 1. Blue airports: controlled airport; ATC communication; minitored traffic;
 
 2. Magenta airport: uncontrolled airport; no direct ATC communication; CTAF or UNICOM (1-to-1) communication
@@ -322,7 +322,7 @@ negative: diverging
 
 17. ATC: (1) who you are talking to, (2) who you are, (3) where you are, (3) what you want. (who who where what)
 
-### Maintenance & Preflight Procedures
+## Maintenance & Preflight Procedures
 1. Maintenance should be done by the manufacturer or professional technician. 
 
 ## Contacts

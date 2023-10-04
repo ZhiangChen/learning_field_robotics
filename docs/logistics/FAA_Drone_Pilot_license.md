@@ -7,7 +7,7 @@ Follow the procedures FAA website: https://www.faa.gov/uas/commercial_operators/
 
 
 ## Exam preparation
-Knowledge test category: FAA Knowledge test: Unmanned Aircraft General – Small (UAG)
+Knowledge test category: FAA Knowledge test: Unmanned Aircraft General â€“ Small (UAG)
 
 Where can I find study materials for the Part 107 aeronautical knowledge test?
 https://www.faa.gov/faq/where-can-i-find-study-materials-part-107-aeronautical-knowledge-test 
@@ -17,7 +17,7 @@ Udemy course: https://www.udemy.com/course/3-hour-faa-107-knowledge-test-prep-fo
 FAA UAS Frequent QnA: https://www.faa.gov/faq?combine&field_faq_category_target_id=1491&page=0
 
 ## Remote ID
-Remote ID, under Part 89 in Title 14, is a digital plate license for a UAV. It is required for all UAVs that are heavier than 0.55 lbs (including 0.55 lbs). UAV must broadcast remote ID messages via wireless devices. When registering your Remote ID, you have to include the serial number of your UAV.
+Remote ID, under Part 89 in Title 14, is a digital license plate for a UAV. It is required for all UAVs that are heavier than 0.55 lbs (including 0.55 lbs). UAV must broadcast remote ID messages via wireless devices. When registering your Remote ID, you have to include the serial number of your UAV.
 
 If not equipped with Remote ID, UAVs can only fly on FAA-Recognized Identification Areas (FRIA), but FRIA authorization needs to be applied for. FRIA application is only open to community-based organizations, primary and secondary educational institutions, etc. The FRIA authorization will be valid for 48 months, and may be renewed or terminated by FAA for safety or security reasons. 
 
@@ -30,7 +30,7 @@ The Remote ID rule was released in April 2021 and will be effective to all pilot
 
 2. FTN: FAA Tracking Number.
 
-3. The initial aeronautical knowledge test, "Unmanned Aircraft General – Small (UAG)", can be scheduled online and has to be taken on site. An exam site can be found on the website of FAA-approved Knowledge Testing Center: https://faa.psiexams.com/faa/login .
+3. The initial aeronautical knowledge test, "Unmanned Aircraft General â€“ Small (UAG)", can be scheduled online and has to be taken on site. An exam site can be found on the website of FAA-approved Knowledge Testing Center: https://faa.psiexams.com/faa/login .
 
 4. The license has to be renewed every two years.
 
@@ -41,7 +41,7 @@ The Remote ID rule was released in April 2021 and will be effective to all pilot
 7. This license allows you to fly at daytime. At night, you need to meet several requirements to fly. Daytime: civil twilight: 6 degrees below the horizon, or 30 min before sunrise and after sunset.  
 Night operation requires no waiver if the following conditions are met:  
 - Training/recurrent training that covers night operation;
-- Anti-collision lighting.
+- Anti-collision lights.
 
 8. Maximum speed: 100mph (45 m/s).
 
@@ -53,7 +53,7 @@ Night operation requires no waiver if the following conditions are met:
 
 12. Visibility: at least 3 miles from the control station.
 
-13. FAA part 107 allows one remote pilot or visual observer to operate one UAV at one time, less you have a waiver.
+13. FAA part 107 allows one remote pilot or visual observer to operate one UAV at one time, unless you have a waiver.
 
 14. Preflight inspection is required before every flight.
 
@@ -136,9 +136,9 @@ FAA Airspace for UAV can be found on the website: https://faa.maps.arcgis.com/ap
 
 6. Class G: floor of 0 AGL, ceiling of 700 or 1200 AGL. 
 
-7. Class B: Big, busy, blue; big airport; Ceiling up to 10,000ft MSL; ceiling in 100 ft/floor in 100 ft.
+7. Class B: Big, busy, blue; big airport; Ceiling up to 10,000 ft MSL; ceiling in 100 ft/floor in 100 ft.
 
-8. Class C: Crowded; medium airport; magenta line; less busier than B.
+8. Class C: Crowded; medium airport; magenta line; less busier than B; Ceiling up to 4,000 ft MSL.
 
 9. Class D: Dashed blue; small airport; [ceiling in 100 ft], floor always starts from surface; smaller than C.
 
@@ -158,7 +158,7 @@ Inside faded magenta, under 700 ft, it's class G. Above 700 ft (including 700 ft
 
 16. Temporary flight restrictions (TFR): cannot fly while they are active. 
 
-17. Military training routes (MRT): MTRs with four digits, e.g., IRI 1256, VR 1998, has no segments above 1500 ft AGL; MTRs with three digits have one or more segments above 1500 ft (there may be one or more parts of the route is below 1500 ft). 
+17. Military training routes (MRT): MTRs with four digits, e.g., IRI 1256, VR 1998, have routes at or below 1500 ft AGL; MTRs with three digits have routes above 1500 ft. 
 
 18. The UAS Facility Map, provided by FAA, displays grids with specific numbers on each grid cell. These numbers represent the maximum allowable altitude, in feet AGL, at which a UAV is allowed to fly within that specific grid cell.
 
@@ -229,12 +229,12 @@ BKN layers are considered a ceiling because they cover more than 1/2 of the sky.
 13. Altitude: AGL (above ground level); MSL (mean sea level); Density altitude: high density altitude is bad for aviation; density altitude is affected by pressure, temperature, and humidity. High humidity is bad for aviation, because water vapor is sparser than air. Density altitude is equal to pressure  altitude on a standard day. 
 
 14. Atmospheric stability (vertical air movement): depends on temperature and moisture in the air;  
-Stable atmosphere: smooth air, poor visibility; steady precipitation; stratiform(stratus) clouds; minimum vertical air movement;  
-Unstable atmosphere: turbulent air, good visibility; showery precipitation (thunderstorms); cumuliform (cumulous) clouds; a lot of verticle air movement; 
+Stable atmosphere: smooth air; poor visibility; steady precipitation; stratiform(stratus) clouds; minimum vertical air movement;  
+Unstable atmosphere: turbulent air; good visibility; showery precipitation (thunderstorms); cumuliform (cumulous) clouds; a lot of verticle air movement; 
 
 15. Thunderstorm  
 Cumulous stage: uplifting  
-Mature stage (cumulonimbus): uplifting and downdraft (most dangerous situation for aviation)  
+Mature stage (cumulonimbus): uplifting and downdraft (most dangerous situation for aviation); nimbus means rain  
 Dissipating stage: uplifting is gone and only downdraft (downdraft overpowers updrafts) 
 
 16. Temperature inversions: air gets warmer when altitude increase, which reduces visibility because the cooler air below is trapped.   

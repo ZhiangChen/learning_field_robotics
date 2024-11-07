@@ -9,6 +9,7 @@
 - label printer
 - storage
 - cable management kit
+- power strip
 
 ## Electronics
 - wire cutter and stripper
@@ -22,7 +23,7 @@
   - hot air
   - shrinking tube kit
   - smoke absorber
-- captain tapes
+- kapton tapes
 - multimeter
 - power supply
 - function generator
@@ -45,7 +46,7 @@
 - measuring  
   - ruler
   - tape measure
-  - micrometer
+  - caliper
   - scale
 
 ## Safety

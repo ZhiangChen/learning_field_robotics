@@ -1,10 +1,10 @@
 # MAVLink Image Transfer System
 
-A Python-based system for transferring images over MAVLink protocol, commonly used in drone and robotic systems.
+An example of transferring images over MAVLink protocol.
 
 ## Overview
 
-This project provides a simple implementation for sending and receiving images over MAVLink communication channels. It consists of two main components:
+This tutorial provides a simple implementation for sending and receiving images over MAVLink communication channels. It consists of two main components:
 
 - **Publisher**: Sends images from a local file to a MAVLink endpoint
 - **Subscriber**: Receives and displays images from a MAVLink stream
@@ -17,7 +17,7 @@ The system uses MAVLink's encapsulated data protocol to break down images into s
 ┌──────────────┐                      ┌──────────────┐
 │              │                      │              │
 │    Image     │                      │    Image     │
-│   Publisher  │ ───MAVLink Data───► │  Subscriber  │
+│   Publisher  │ ───MAVLink Data───►  │  Subscriber  │
 │              │                      │              │
 └──────────────┘                      └──────────────┘
 ```
@@ -109,18 +109,4 @@ MAVLink supports various connection types:
 - For larger images or video streams, consider adjusting compression settings
 - Transmission speed depends on the bandwidth of your MAVLink connection
 
-## Troubleshooting
 
-Common issues:
-
-1. **No connection**: Ensure both publisher and subscriber have correct connection strings
-2. **Missing packets**: Check for interference or weak signal in wireless connections
-3. **Image decoding errors**: Verify the image format is supported by OpenCV
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

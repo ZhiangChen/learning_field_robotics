@@ -62,37 +62,54 @@ def send_image(connection, image_path):
     size = len(img_bytes)
     chunk_size = 253
     packets = (size + chunk_size - 1) // chunk_size
-
+    
     connection.mav.data_transmission_handshake_send(
-        1,  # type: JPEG
-        size,
-        img.shape[1],
-        img.shape[0],
-        packets,
-        chunk_size,
-        100
-    )
+        1,             # type: 1 indicates the image type is JPEG
+        size,          # size: total size of the image in bytes
+        img.shape[1],  # width: width of the image in pixels
+        img.shape[0],  # height: height of the image in pixels
+        packets,       # packets: total number of packets to send the image
+        chunk_size,    # payload: size of each packet in bytes
+        100            # jpg_quality: quality of the JPEG image (0-100)
+)
+
 
     for i in range(packets):
+        # Extract a chunk of the bytes from the image
         chunk = img_bytes[i*chunk_size:(i+1)*chunk_size]
-        connection.mav.encapsulated_data_send(i, chunk.ljust(253, b'\0'))
+        connection.mav.encapsulated_data_send(i, chunk.ljust(253, b'\0')) #packet sequence number & data packet (padded with zeros to make it 253 bytes)
         print(f"Sent packet {i+1}/{packets}")
 
     print("Image sent")
 
 
 def main():
+    # Create an argument parser for command-line options
     parser = argparse.ArgumentParser(description='MAVLink Image Publisher')
-    parser.add_argument('--connect', default='udpout:localhost:14550', help='Connection string')
-    parser.add_argument('--image', required=True, help='Path to image file')
+    
+    # Add --connect argument for MAVLink connection
+    parser.add_argument('--connect', default='udpout:localhost:14550',
+                        help='Connection string')
+    
+    # Specify the path to the image
+    parser.add_argument('--image', required=True,
+                        help='Path to image file')
+    
+    # Parse command-line arguments
     args = parser.parse_args()
 
+    # Set up MAVLink connection
     connection = setup_publisher(args.connect)
+
+    # Heartbeak to check operation
     connection.mav.heartbeat_send(
-        mavutil.mavlink.MAV_TYPE_GCS,
-        mavutil.mavlink.MAV_AUTOPILOT_INVALID,
-        0, 0, 0
+        mavutil.mavlink.MAV_TYPE_GCS,         # Type of system
+        mavutil.mavlink.MAV_AUTOPILOT_INVALID, # Autopilot type
+        0,                                     # Base mode
+        0,                                     # Custom mode
+        0                                      # System status
     )
+
 
     send_image(connection, args.image)
 

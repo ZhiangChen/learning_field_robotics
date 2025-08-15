@@ -33,6 +33,12 @@ Go through every item in the MP mandatory hardware configuration:
 - Sik Radio
 - Battery Monitor
 - Motor Test
+- Configure `log_bitmask` as follows: ![log_bitmask](materials/log_bitmask.png)
+- Set `MOT_HOVER_LEARN=2`
+
+
+## Ardupilot hardware report
+https://ardupilot.github.io/MethodicConfigurator/TUNING_GUIDE_ArduCopter#611-ardupilot-hardware-report 
 
 ## First flight  
 
@@ -46,7 +52,8 @@ Before the flight, check the following items:
 - Start screen recording. Make sure that `magfield` on status in data panel is on display 
 
 
-## First flight 
+## First flights 
+### Flights
 - Stabilize mode
     - Increase throttle slowly without taking off. Observe oscillation or instability:
         - If oscillations occur, **immediately disarm** the vehicle. Check: Motor direction and installation, Motor wiring configuration, Propeller direction and placement, and PID gain values. Also, check methodic configurator for more information: https://ardupilot.github.io/MethodicConfigurator/TUNING_GUIDE_ArduCopter#711-check-for-motor-output-oscillation
@@ -65,7 +72,41 @@ Before the flight, check the following items:
     - `PSC_ACCZ_I = 2 × MOT_THST_HOVER`
 
 
-Download and review flight log
+### Download and review flight log
 - Plot `CTUN.Alt` (altitude) and check associated mode, messages, errors, and events. 
 - Plot `MAG.0.MagX`, `MAG.0.MagY`, `MAG.0.MagZ`. The range of magnetic field should be [300, 600]. Check the standard variance during the hovering, which should be within 80. Otherwise, magnetic interference is likely involved. 
+- Check motor oscillation by plotting `RCOU.C1`, `RCOU.C2`, `RCOU.C3`, `RCOU.C4`: https://ardupilot.github.io/MethodicConfigurator/TUNING_GUIDE_ArduCopter#711-check-for-motor-output-oscillation
+- Check flight controller vibration by plotting `VIBE.0.VibeX`, `VIBE.0.VibeY`, `VIBE.0.VibeZ. Normal levels are below 15m/s/s but occasionally peak to 30m/s/s. Maximum acceptable values appear to be below 30m/s/s: https://ardupilot.org/copter/docs/common-measuring-vibration.html#vibe-dataflash-log-message  
+Typicall, high-end flight controllers include decent foam isolators and significantly reduce vibration. 
+- Check acceleration `IMU.0.AccX`, `IMU.0.AccY`, `IMU.0.AccZ`: Acceptable AccX and AccY are between -3 and +3. For AccZ, the acceptable range is -15 to -5.
+
+### Notch filter
+A notch filter is a type of filter that removes a narrow band of frequencies from a signal while allowing all other frequencies to pass. Notch filters are used to remove motor-induced vibrations that interfere with sensors like gyroscopes (IMUs), helping to improve flight stability, reduce false sensor readings, and prevent oscillations caused by PID loops reacting to vibration noise. 
+
+Reading about low-pass filter (accelerometers) and notch filter (gyros): https://ardupilot.org/copter/docs/common-imu-notch-filtering.html 
+
+Load the .bin log from the first flight onto the online Ardupilot Filter Review tool Follow the instructions from Peter Hall on his Blog Post to configure the Harmonic Notch filter(s):
+
+https://firmware.ardupilot.org/Tools/WebTools/FilterReview/  
+https://discuss.ardupilot.org/t/new-fft-filter-setup-and-review-web-tool/102572 
+
+```
+INS_HNTCH_ENABLE    = 1     # enable harmonic notch
+INS_HNTCH_MODE      = 1     # throttle (4 if PRM telem if available)
+INS_HNTCH_REF       = 0.3   # MOT_THST_HOVER
+INS_HNTCH_FREQ      = 80    # 1st notch frequency (show notch 1)
+INS_HNTCH_BW        = 40    # half of 
+INS_HNTCH_ATT       = 40    # default
+INS_HNTCH_HMNCS     = 3     # 1st and 2nd harmonics
+INS_HNTC2_OPTS      = 0     # default
+```
+
+`INS_GYRO_FILTER` is initially set by the propeller size: https://ardupilot.org/copter/docs/setting-up-for-tuning.html
+
+For notch filtering, `INS_GYRO_FILTER = 1.2-2 x INS_HNTCH_BW` and must be greater than the initial value by propeller size. 
+
+### QuickTune
+https://ardupilot.org/copter/docs/quiktune.html 
+
+Note that switching RC to "low" to save tune may be the case. The tuning process would take 3 minutes. 
 

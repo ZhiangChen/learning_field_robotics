@@ -11,6 +11,11 @@ BRD_SAFETY_DEFLT = 1
 BRD_SAFETYOPTION = 0
 ```
 
+## IMU temperature calibration
+"IMU temperature calibration reduces the probability of Accel inconsistent and Gyro inconsistent errors and reduces the time required to arm the vehicle. IMU temperature calibration requires lowering the temperature of the autopilot (flight controller) to circa -20°C. That is harder to do once the autopilot is assembled inside the vehicle, hence it is done now". (https://ardupilot.github.io/MethodicConfigurator/TUNING_GUIDE_ArduCopter)
+
+https://ardupilot.org/copter/docs/common-imutempcal.html
+
 
 ## Misson Planner mandatory hardware configuration
 
@@ -106,7 +111,20 @@ INS_HNTC2_OPTS      = 0     # default
 For notch filtering, `INS_GYRO_FILTER = 1.2-2 x INS_HNTCH_BW` and must be greater than the initial value by propeller size. 
 
 ### QuickTune
-https://ardupilot.org/copter/docs/quiktune.html 
+https://ardupilot.org/copter/docs/quiktune.html
 
-Note that switching RC to "low" to save tune may be the case. The tuning process would take 3 minutes. 
+The tuning process typically takes 3 minutes. Note that, by default, the "0" position of the switches corresponds to the "high" position (as 0 is physically higher).  
 
+### AutoTune
+https://ardupilot.org/copter/docs/autotune.html
+
+Because of using `AltHold`, you may need to tune and trim the UAV if the UAV experiences significant drifting issues (https://ardupilot.org/copter/docs/autotrim.html). It is recommended to perform this process on a calm day with wind speeds below 3 m/s. Make sure that the twitch direction is 90 deg to wind direction. The tuning process typically takes 5–8 minutes.
+
+### Magfit
+https://ardupilot.org/copter/docs/common-magfit.html
+
+To calibrate the compass, you need to change the UAV's yaw. For example, performing a figure-8 flight is recommended. When using Magfit, aim for at least 1/3 coverage (1/4 is also acceptable). To fully achieve motor compensation, apply dramatic throttle, pitch, and roll inputs. (You only do this after at least QuickTune to ensure a reliable controller).  
+
+
+### References:
+ArduPilot Methodic Configurator: https://ardupilot.github.io/MethodicConfigurator/TUNING_GUIDE_ArduCopter
